@@ -1,55 +1,56 @@
 package exercise.chapter1;
 
-import exercise.depend.In;
+//import exercise.depend.In;
 import exercise.depend.StdDraw;
 import exercise.depend.StdIn;
 
-//Ö±·½Í¼
-//ÉèÊäÈëÁ÷ÖĞÓĞÒ»ÏµÁĞdoubleÖµ£¬´ÓÃüÁîĞĞ½ÓÊÜÒ»¸öÕûÊıNºÍÁ½¸ödoubleÖµlºÍr£¬½«(l,r)·ÖÎªN¶Î²¢Ê¹ÓÃStdDraw»­³öÊäÈëÁ÷ÖĞÖµÂäÈëÃ¿¶ÎÊıÁ¿µÄÖ±·½Í¼
+//ç›´æ–¹å›¾
+//è®¾è¾“å…¥æµä¸­æœ‰ä¸€ç³»åˆ—doubleå€¼ï¼Œä»å‘½ä»¤è¡Œæ¥å—ä¸€ä¸ªæ•´æ•°Nå’Œä¸¤ä¸ªdoubleå€¼lå’Œrï¼Œå°†(l,r)åˆ†ä¸ºNæ®µå¹¶
+//ä½¿ç”¨StdDrawç”»å‡ºè¾“å…¥æµä¸­å€¼è½å…¥æ¯æ®µæ•°é‡çš„ç›´æ–¹å›¾
 public class EX1132DrawHistogram {
 
-	private static int[] dataHistogram(int N, double l, double r, double[] arr) {
-		int[] hArray = new int[N];
-		double delta;
+private static int[] dataHistogram(int N, double l, double r, double[] arr) {
+	int[] hArray = new int[N];
+	double delta;
 
-		delta = (r - l) / N;
+	delta = (r - l) / N;
 
-		for (int i = 0; i < arr.length; i++) {
-			if (arr[i] >= l && arr[i] < r) {
-				int idx = (int) ((arr[i] - l) / delta);
-				hArray[idx]++;
-			}
+	for (int i = 0; i < arr.length; i++) {
+		if (arr[i] >= l && arr[i] < r) {
+			int idx = (int) ((arr[i] - l) / delta);
+			hArray[idx]++;
 		}
-		return hArray;
 	}
+	return hArray;
+}
 
-	public static void main(String[] args) {
+public static void main(String[] args) {
 //		In in = new In("largeW.txt");
 //		double[] list = in.readAllDoubles();
-		double[] list = {0.1,0.2,0.3,0.4,0.5,0.12,0.23};
-		System.out.print("input N£º");
-		int N = StdIn.readInt();
-		System.out.print("input l£º");
-		double l = StdIn.readDouble();
-		System.out.print("input r£º");
-		double r = StdIn.readDouble();
-		int[] hArray = dataHistogram(N, l, r, list);
-		double max = hArray[0];
-		for (int i = 1; i < hArray.length; ++i) {
-			if (max < hArray[i])
-				max = hArray[i];
-		}
-		StdDraw.setXscale(l, r);
-		StdDraw.setPenColor(StdDraw.BOOK_BLUE);
-		double interval = (r - l) / N;
-		double x0 = l + interval / 2.0;
-		for (int i = 0; i < hArray.length; i++) {
-			double x = x0 + i * interval;
-			double y = hArray[i] / (max + 1) / 2.0;
-			double hw = 0.99 * interval / 2.0;
-			double hh = y;
-			StdDraw.filledRectangle(x, y, hw, hh);
-		}
+	double[] list = {0.1,0.2,0.3,0.4,0.5,0.12,0.23};
+	System.out.print("input Nï¼š");
+	int N = StdIn.readInt();
+	System.out.print("input lï¼š");
+	double l = StdIn.readDouble();
+	System.out.print("input rï¼š");
+	double r = StdIn.readDouble();
+	int[] hArray = dataHistogram(N, l, r, list);
+	double max = hArray[0];
+	for (int i = 1; i < hArray.length; ++i) {
+		if (max < hArray[i])
+			max = hArray[i];
 	}
+	StdDraw.setXscale(l, r);
+	StdDraw.setPenColor(StdDraw.BOOK_BLUE);
+	double interval = (r - l) / N;
+	double x0 = l + interval / 2.0;
+	for (int i = 0; i < hArray.length; i++) {
+		double x = x0 + i * interval;
+		double y = hArray[i] / (max + 1) / 2.0;
+		double hw = 0.99 * interval / 2.0;
+		double hh = y;
+		StdDraw.filledRectangle(x, y, hw, hh);
+	}
+}
 
 }

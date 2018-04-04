@@ -1,7 +1,7 @@
 package exercise.chapter1;
 
-//Å·¼¸ÀïµÃËã·¨¼ÆËã105ºÍ24µÄ×î´ó¹«Ô¼Êý¹ý³ÌÖÐµÄµ½µÄÒ»ÏµÁÐpºÍqµÄÖµ
-//ÍØÕ¹¸Ã·½·¨£¬´ÓÃüÁîÐÐ½ÓÊÜÁ½²ÎÊý£¬¼ÆËã×î´ó¹«Ô¼Êý²¢´òÓ¡³öÃ¿´ÎµÝ¹éÊ±µÄÁ½²ÎÊý£¬¼ÆËã1 111 111ºÍ1 234 567µÄ×î´ó¹«Ô¼Êý
+//æ¬§å‡ é‡Œå¾—ç®—æ³•è®¡ç®—105å’Œ24çš„æœ€å¤§å…¬çº¦æ•°è¿‡ç¨‹ä¸­çš„åˆ°çš„ä¸€ç³»åˆ—på’Œqçš„å€¼
+//æ‹“å±•è¯¥æ–¹æ³•ï¼Œä»Žå‘½ä»¤è¡ŒæŽ¥å—ä¸¤å‚æ•°ï¼Œè®¡ç®—æœ€å¤§å…¬çº¦æ•°å¹¶æ‰“å°å‡ºæ¯æ¬¡é€’å½’æ—¶çš„ä¸¤å‚æ•°ï¼Œè®¡ç®—1 111 111å’Œ1 234 567çš„æœ€å¤§å…¬çº¦æ•°
 public class EX1124Euclib {
 	public static long gcd(long a, long b) {
 		System.out.println("p:" + a + " q:" + b);

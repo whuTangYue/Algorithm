@@ -1,19 +1,19 @@
-//ÓÃÓĞÏŞ¸öÕ»À´ÊµÏÖÒ»¸ö¶ÓÁĞ£¬±£Ö¤Ã¿¸ö¶ÓÁĞ²Ù×÷£¨ÔÚ×î»µÇé¿öÏÂ) ¶¼Ö»ĞèÒª³£Êı´ÎµÄÕ»²Ù×÷¡£
+//ç”¨æœ‰é™ä¸ªæ ˆæ¥å®ç°ä¸€ä¸ªé˜Ÿåˆ—ï¼Œä¿è¯æ¯ä¸ªé˜Ÿåˆ—æ“ä½œï¼ˆåœ¨æœ€åæƒ…å†µä¸‹) éƒ½åªéœ€è¦å¸¸æ•°æ¬¡çš„æ ˆæ“ä½œã€‚
 
-//Ô­Ëã·¨Ğè6¸öÕ»
-// QueueWithSevenStacks is based on the description of a six list queue lisp implementation 
-//   by Hood and Melville at 
+//åŸç®—æ³•éœ€6ä¸ªæ ˆ
+// QueueWithSevenStacks is based on the description of a six list queue lisp implementation
+//   by Hood and Melville at
 //   https://ecommons.cornell.edu/bitstream/handle/1813/6273/80-433.pdf?sequence=1&isAllowed=y
-//lispÊµÏÖ£º
+//lispå®ç°ï¼š
 // list[recopy,lendiff,#copy,H,T,h,H',T',Hr]
 //an empty queue : list[false,0,0,NIL,NIL,NIL,NIL,NIL,NIL]
-// Insert[q,v] = 
+// Insert[q,v] =
 //  if !recopy ^ lendiff>0 list[False,lendiff-1,0,H,cons[v,T],NIL,NIL,NIL,NIL]
 //     !recopy ^ lendiff=0 Onestep(Onestep([True,0,0,H,cons[v,T],H,NIL,NIL,NIL]))
 //      recopy             Onestep(Onestep([True,lendiff-1,#copy,H,T,H,H',cons[v,T],Hr]))
 //  fi
 //
-// Delete[q] = 
+// Delete[q] =
 //  if !recopy ^ lendiff>0 list[False,lendiff-1,0,cdr[H],T,NIL,NIL,NIL,NIL]
 //     !recopy ^ lendiff=0 Onestep(Onestep([True,0,0,cdr[H],T,cdr[H],NIL,NIL,NIL]))
 //      recopy             Onestep(Onestep([True,lendiff-1,#copy,H,T,cdr[h],H',T',Hr]))
@@ -34,29 +34,29 @@
 //      recopy ^  null[H] ^ !null[T]
 //          list[false,lendiff+1,0  ,cons[car[Hr],H'],T',NIL,NIL,NIL,NIL]
 
-// ÓëÆäËµÊÇ6¸öÕ»£¬²»ÈçËµÊÇÎ¬³ÖÔÚÍ¬Ò»¶ÓÁĞÊı¾İ½á¹¹ÉÏµÄ6¸öÕ»Ö¸Õë
-// ½«ÕâÒ»Ëã·¨ÓÃjavaÓïÑÔÊµÏÖÊ±£¬ÓÉÓÚjavaÓïÑÔ±¾ÉíµÄÌØĞÔ£¬¶à¼ÓÁËÒ»¸öÕ»
-//lisp ÖĞlist½á¹¹Êµ¼ÊÊÇÒ»ÌõÁ´±í£¬ Èô h = H , cdr[h],HºÍh¶¼ÊÇÖ¸ÏòÁ´±í½áµãµÄÖ¸Õë
-//»áÓĞ H->Item1->Item2->...->null
+// ä¸å…¶è¯´æ˜¯6ä¸ªæ ˆï¼Œä¸å¦‚è¯´æ˜¯ç»´æŒåœ¨åŒä¸€é˜Ÿåˆ—æ•°æ®ç»“æ„ä¸Šçš„6ä¸ªæ ˆæŒ‡é’ˆ
+// å°†è¿™ä¸€ç®—æ³•ç”¨javaè¯­è¨€å®ç°æ—¶ï¼Œç”±äºjavaè¯­è¨€æœ¬èº«çš„ç‰¹æ€§ï¼Œå¤šåŠ äº†ä¸€ä¸ªæ ˆ
+//lisp ä¸­listç»“æ„å®é™…æ˜¯ä¸€æ¡é“¾è¡¨ï¼Œ è‹¥ h = H , cdr[h],Hå’Œhéƒ½æ˜¯æŒ‡å‘é“¾è¡¨ç»“ç‚¹çš„æŒ‡é’ˆ
+//ä¼šæœ‰ H->Item1->Item2->...->null
 //             ^
 //             |
 //             h
 //
-// ¶ø java ÖĞ£¬ÓÉÓÚÃ»ÓĞÖ¸ÕëÀàĞÍ£¬Èô h = H ,h.pop()
-// hºÍH»áÊÇÍ¬Ò»Êı¾İ½á¹¹£¬h.pop()Êµ¼ÊÒ²ÊÇH.pop() ¶øÁ´±íµÄ¸´ÖÆ£¬Ê±¼ä¸´ÔÓ¶ÈÊÇO(n)
-// ËùÒÔ£¬ÕâÀï¶àÊ¹ÓÃÁËÒ»¸öÕ» H2,H2µÄpushºÍpopÓëH1Í¬²½¡£ÕâÒ»¿Õ¼ä»¨·ÑÍêÈ«ÊÇÓÉÓÚjava±¾ÉíµÄÌØĞÔÏŞÖÆ
+// è€Œ java ä¸­ï¼Œç”±äºæ²¡æœ‰æŒ‡é’ˆç±»å‹ï¼Œè‹¥ h = H ,h.pop()
+// hå’ŒHä¼šæ˜¯åŒä¸€æ•°æ®ç»“æ„ï¼Œh.pop()å®é™…ä¹Ÿæ˜¯H.pop() è€Œé“¾è¡¨çš„å¤åˆ¶ï¼Œæ—¶é—´å¤æ‚åº¦æ˜¯O(n)
+// æ‰€ä»¥ï¼Œè¿™é‡Œå¤šä½¿ç”¨äº†ä¸€ä¸ªæ ˆ H2,H2çš„pushå’Œpopä¸H1åŒæ­¥ã€‚è¿™ä¸€ç©ºé—´èŠ±è´¹å®Œå…¨æ˜¯ç”±äºjavaæœ¬èº«çš„ç‰¹æ€§é™åˆ¶
 
-// ´Ó stackoverflow ÉÏ antti.huima µÄ»Ø´ğ
+// ä» stackoverflow ä¸Š antti.huima çš„å›ç­”
 //http://stackoverflow.com/questions/5538192/how-to-implement-a-queue-with-three-stacks
 //>######SUMMARY
-//>>O(1) algorithm is known for 6 stacks  
-//>>O(1) algorithm is known for 3 stacks, 
-//but using lazy evaluation which in practice corresponds to having extra internal data structures, 
-//so it does not constitute a solution  
-//>>People near Sedgewick have confirmed they are not aware of a 3-stack solution within all the constraints 
+//>>O(1) algorithm is known for 6 stacks
+//>>O(1) algorithm is known for 3 stacks,
+//but using lazy evaluation which in practice corresponds to having extra internal data structures,
+//so it does not constitute a solution
+//>>People near Sedgewick have confirmed they are not aware of a 3-stack solution within all the constraints
 //of the original question
 
-//thanks to GitHub user  zalacer£¬ÕâÀï²Î¿¼ÁËËûµÄ½â´ğ
+//thanks to GitHub user  zalacerï¼Œè¿™é‡Œå‚è€ƒäº†ä»–çš„è§£ç­”
 // https://github.com/zalacer/projects-tn/blob/862c13adc573d6bd88ab242790f67eb5bebc243f/Algorithms4edCh1%2B2/src/ds/QueueWithSevenStacks.java
 
 package exercise.chapter1;

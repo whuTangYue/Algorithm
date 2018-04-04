@@ -1,18 +1,18 @@
 package study.chapter1;
 import java.math.BigInteger;
 
-//FibonacciËã·¨µÄÁ½ÖÖÊµÏÖ
-//Ò»Îª"¶¯Ì¬¹æ»®"(F) ÏßĞÔ¸´ÔÓ¶È
-//Ò»Îª"·ÖÖÎ"(fib) log2(N)¸´ÔÓ¶È£¬²ÉÓÃBigInteger´óÊıÀà
-//BigIntegerÊı×éÒª³õÊ¼»¯Îª0
+//Fibonacciç®—æ³•çš„ä¸¤ç§å®ç°
+//ä¸€ä¸º"åŠ¨æ€è§„åˆ’"(F) çº¿æ€§å¤æ‚åº¦
+//ä¸€ä¸º"åˆ†æ²»"(fib) log2(N)å¤æ‚åº¦ï¼Œé‡‡ç”¨BigIntegerå¤§æ•°ç±»
+//BigIntegeræ•°ç»„è¦åˆå§‹åŒ–ä¸º0
 public class Fibonacci {
-	
+
 	public static void main(String[] args) {
 		for(int N=0;N<100;N++)
 //		int N=47;
 			System.out.println(N+" "+fib(N));
 	}
-	
+
 	public static long F(int N){
 		if(N==0) return 0;
 		if(N==1) return 1;
@@ -20,14 +20,14 @@ public class Fibonacci {
 		long[] ans = new long[N+1];
 		ans[0]=0;
 		ans[1]=1;
-		for(int i=2; i<=N; i++)  
-	        ans[i] = ans[i-1] + ans[i-2];  
+		for(int i=2; i<=N; i++)
+	        ans[i] = ans[i-1] + ans[i-2];
 		return ans[N];
 	}
-	
+
 	private static BigInteger[][] MatrixPow(BigInteger[][] m,int n){
 		BigInteger[][] result = new BigInteger[m.length][m[0].length];
-		
+
 		for(int i=0;i<result.length;i++){
 			for(int j=0;j<result.length;j++)
 				result[i][j]=BigInteger.ZERO;
@@ -55,7 +55,7 @@ public class Fibonacci {
 		BigInteger f=an[1][0];
 		return f;
 	}
-	
-	
+
+
 
 }

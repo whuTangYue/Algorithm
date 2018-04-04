@@ -1,18 +1,18 @@
 package exercise.chapter1;
 
 //BinaryString
-// ÕıÕûÊıN ÓÃ¶ş½øÖÆ±íÊ¾²¢×ª»»ÎªStringÀàĞÍ
+// æ­£æ•´æ•°N ç”¨äºŒè¿›åˆ¶è¡¨ç¤ºå¹¶è½¬æ¢ä¸ºStringç±»å‹
 public class EX1109toBinaryString {
 
-	final static char[] digits = {         
-		    '0' , '1' , '2' , '3' , '4' , '5' ,         
-		    '6' , '7' , '8' , '9' , 'a' , 'b' ,         
-		    'c' , 'd' , 'e' , 'f' , 'g' , 'h' ,         
-		    'i' , 'j' , 'k' , 'l' , 'm' , 'n' ,         
-		    'o' , 'p' , 'q' , 'r' , 's' , 't' ,         
-		    'u' , 'v' , 'w' , 'x' , 'y' , 'z'     
-		    }; //ËùÓĞ¿ÉÄÜµÄ½«Êı×Ö±íÊ¾Îª×Ö·û´®µÄ×Ö·û¼¯ºÏ¡£
-	
+	final static char[] digits = {
+		    '0' , '1' , '2' , '3' , '4' , '5' ,
+		    '6' , '7' , '8' , '9' , 'a' , 'b' ,
+		    'c' , 'd' , 'e' , 'f' , 'g' , 'h' ,
+		    'i' , 'j' , 'k' , 'l' , 'm' , 'n' ,
+		    'o' , 'p' , 'q' , 'r' , 's' , 't' ,
+		    'u' , 'v' , 'w' , 'x' , 'y' , 'z'
+		    }; //æ‰€æœ‰å¯èƒ½çš„å°†æ•°å­—è¡¨ç¤ºä¸ºå­—ç¬¦ä¸²çš„å­—ç¬¦é›†åˆã€‚
+
 	public static String toBinaryString(int i){
 		return toUnsignedString(i,1);
 	}

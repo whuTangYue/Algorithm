@@ -1,7 +1,7 @@
 package exercise.chapter1;
 
 //histogram
-//½ÓÊÜÒ»¸öÕûĞÍÊı×éºÍÒ»¸öÕûÊıM£¬·µ»ØÒ»¸ö´óĞ¡ÎªMµÄÊı×é£¬ÆäÖĞµÚi¸öÔªËØµÄÖµÎªiÔÚÊı×éÖĞ³öÏÖµÄ´ÎÊı
+//æ¥å—ä¸€ä¸ªæ•´å‹æ•°ç»„å’Œä¸€ä¸ªæ•´æ•°Mï¼Œè¿”å›ä¸€ä¸ªå¤§å°ä¸ºMçš„æ•°ç»„ï¼Œå…¶ä¸­ç¬¬iä¸ªå…ƒç´ çš„å€¼ä¸ºiåœ¨æ•°ç»„ä¸­å‡ºç°çš„æ¬¡æ•°
 public class EX1115histogram {
 
 	public static void main(String[] args) {
@@ -9,7 +9,7 @@ public class EX1115histogram {
 		printArray(histogram(array,8));
 
 	}
-	
+
 	private static int[] histogram(int[] a,int M){
 		 int[] hArray=new int[M];
 	        for(int i=0;i<M;i++){

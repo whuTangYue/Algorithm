@@ -1,9 +1,9 @@
 package study.chapter1;
 
 public class Postfix {
-	
+
 	//Reads in an infix expression and outputs an equivalent postfix  expression.
-	//ÊäÈë¸÷ÔªËØÖ®¼äĞèÓÃ¿Õ¸ñ·Ö¸ô£¬Î´Ê¡ÂÔÀ¨ºÅ£¬¼´²»¿¼ÂÇÓÅÏÈ¼¶
+	//è¾“å…¥å„å…ƒç´ ä¹‹é—´éœ€ç”¨ç©ºæ ¼åˆ†éš”ï¼Œæœªçœç•¥æ‹¬å·ï¼Œå³ä¸è€ƒè™‘ä¼˜å…ˆçº§
 	public static String InfixToPostfix(String infix){
 		Stack<String> stack = new Stack<String>();
 		String res ="";
@@ -22,7 +22,7 @@ public class Postfix {
 		}
 		return res;
 	}
-	
+
 	//Evaluates postfix expresions using a stack.
 	//All token must be separated by whitespace, e.g., 1 5+ is illegal.
 	public static double EvaluatePostfix(String postfix){

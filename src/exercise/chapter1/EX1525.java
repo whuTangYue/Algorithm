@@ -3,6 +3,7 @@ package exercise.chapter1;
 import java.util.Arrays;
 import java.util.Scanner;
 
+//1.5.25 随机网络的倍率测试
 public class EX1525 {
 
 	public static void main(String[] args) {

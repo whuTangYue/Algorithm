@@ -31,11 +31,11 @@ public class EX1139RandomMatch {
 	}
 
 	/**
-	 * ·µ»Ø³¤¶ÈÎªlengthµÄËæ»ú6Î»ÕıÕûÊıÊı×é
-	 * 
+	 * è¿”å›é•¿åº¦ä¸ºlengthçš„éšæœº6ä½æ­£æ•´æ•°æ•°ç»„
+	 *
 	 * @param length
-	 *            Êı×é³¤¶È
-	 * @return Ëæ»ú6Î»ÕıÕûÊıÊı×é
+	 *            æ•°ç»„é•¿åº¦
+	 * @return éšæœº6ä½æ­£æ•´æ•°æ•°ç»„
 	 */
 	private static int[] randomArray(int length) {
 		Random random = new Random();

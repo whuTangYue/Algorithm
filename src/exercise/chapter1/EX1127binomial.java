@@ -1,7 +1,7 @@
 package exercise.chapter1;
 
 //binomial
-//二项分布
+//浜岄」鍒嗗竷
 public class EX1127binomial {
 
 	public static double binomial(int N,int k,double p){

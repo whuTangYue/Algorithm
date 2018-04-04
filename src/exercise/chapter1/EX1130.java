@@ -1,7 +1,7 @@
 package exercise.chapter1;
 
-//数组练习
-//N*N 数组a[][] 当i，j互质时a[i][j]=true,否则false
+//鏁扮粍缁冧範
+//N*N 鏁扮粍a[][] 褰搃锛宩浜掕川鏃禷[i][j]=true,鍚﹀垯false
 public class EX1130 {
 
 	public static void main(String[] args) {

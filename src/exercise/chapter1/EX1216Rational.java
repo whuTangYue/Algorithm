@@ -3,7 +3,7 @@ package exercise.chapter1;
 import study.chapter1.Euclid;
 
 //Rational
-//ÎªÓĞÀíÊıÊµÏÖÒ»¸ö²»¿É±äÊı¾İÀàĞÍ£¬Ö§³Ö¼Ó¼õ³Ë³ı²Ù×÷
+//ä¸ºæœ‰ç†æ•°å®ç°ä¸€ä¸ªä¸å¯å˜æ•°æ®ç±»å‹ï¼Œæ”¯æŒåŠ å‡ä¹˜é™¤æ“ä½œ
 public class EX1216Rational {
 	public static void main(String[] args) {
 		Rational a = new Rational(1, 2);

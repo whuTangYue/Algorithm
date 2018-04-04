@@ -13,7 +13,6 @@ public class DateTest{
 class Testdate extends Date{
 	public Testdate(int m, int d, int y) {
 		super(m, d, y);
-		// TODO Auto-generated constructor stub
 	}
 	public String toString()
 	{return month()+"."+day()+"."+year();}

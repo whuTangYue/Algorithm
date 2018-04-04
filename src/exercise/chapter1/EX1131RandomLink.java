@@ -4,8 +4,8 @@ import java.util.Random;
 
 import exercise.depend.StdDraw;
 
-//Ëæ»úÁ¬½Ó
-//½ÓÊÜÒ»¸öÕûÊıNºÍÒ»¸ödouble p(0<p<1)×÷Îª²ÎÊı£¬ÔÚÒ»¸öÔ²ÉÏ»­³ö´óĞ¡0.05¼ä¾àÏàµÈµÄN¸öµã£¬È»ºóan¸ÅÂÊpÓÃ»ÒÏßÁ¬½Ó
+//éšæœºè¿æ¥
+//æ¥å—ä¸€ä¸ªæ•´æ•°Nå’Œä¸€ä¸ªdouble p(0<p<1)ä½œä¸ºå‚æ•°ï¼Œåœ¨ä¸€ä¸ªåœ†ä¸Šç”»å‡ºå¤§å°0.05é—´è·ç›¸ç­‰çš„Nä¸ªç‚¹ï¼Œç„¶åanæ¦‚ç‡pç”¨ç°çº¿è¿æ¥
 public class EX1131RandomLink {
 
 	public static void main(String[] args) {
@@ -13,10 +13,10 @@ public class EX1131RandomLink {
 
 	}
 	/**
-	 * »­Ô²
-	 * @param x Ô²ĞÄx×ø±ê
-	 * @param y Ô²ĞÄy×ø±ê
-	 * @param r °ë¾¶r
+	 * ç”»åœ†
+	 * @param x åœ†å¿ƒxåæ ‡
+	 * @param y åœ†å¿ƒyåæ ‡
+	 * @param r åŠå¾„r
 	 */
 	private static void drawCircle(double x, double y, double r) {
 	    StdDraw.setXscale(0, 2 * x);
@@ -27,11 +27,11 @@ public class EX1131RandomLink {
 	}
 
 	/**
-	 * ÔÚÔ²ÉÏÃèµã
-	 * @param x0 Ô²ĞÄx×ø±ê
-	 * @param y0 Ô²ĞÄy×ø±ê
-	 * @param r °ë¾¶r
-	 * @param N N¸öµã
+	 * åœ¨åœ†ä¸Šæç‚¹
+	 * @param x0 åœ†å¿ƒxåæ ‡
+	 * @param y0 åœ†å¿ƒyåæ ‡
+	 * @param r åŠå¾„r
+	 * @param N Nä¸ªç‚¹
 	 */
 	private static double[][] drawPoints(double x0, double y0, double r, int N) {
 	    double[][] points = new double[N][2];
@@ -48,9 +48,9 @@ public class EX1131RandomLink {
 	}
 
 	/**
-	 * ÒÔ¸ÅÂÊpËæ»úÁ¬½Ó¶¥µã¼¯pointsÖĞµÄµã
-	 * @param points    µã¼¯
-	 * @param p ¸ÅÂÊp
+	 * ä»¥æ¦‚ç‡péšæœºè¿æ¥é¡¶ç‚¹é›†pointsä¸­çš„ç‚¹
+	 * @param points    ç‚¹é›†
+	 * @param p æ¦‚ç‡p
 	 */
 	private static void randomLinkPoints(double[][] points, double p) {
 	    StdDraw.setPenRadius(0.002);
@@ -60,13 +60,13 @@ public class EX1131RandomLink {
 	    for(int i = 0; i < length; ++i)
 	        for(int j = 0; j < length; ++j)
 	            if(random.nextDouble()<p)
-	                StdDraw.line(points[i][0], points[i][1], points[j][0], points[j][1]); // Ó¦¸ÃÔÙ½¨Á¢Ò»¸ö°üº¬x×ø±êºÍy×ø±êµÄÊı¾İ½á¹¹
+	                StdDraw.line(points[i][0], points[i][1], points[j][0], points[j][1]); // åº”è¯¥å†å»ºç«‹ä¸€ä¸ªåŒ…å«xåæ ‡å’Œyåæ ‡çš„æ•°æ®ç»“æ„
 	}
 
 	/**
-	 * ÔÚÔ²ÉÏ»­N¸öµãÈ»ºóÃ¿Á½µã¼äÒÔ¸ÅÂÊpÁ¬½Ó
-	 * @param N N¸öµã
-	 * @param p ¸ÅÂÊp
+	 * åœ¨åœ†ä¸Šç”»Nä¸ªç‚¹ç„¶åæ¯ä¸¤ç‚¹é—´ä»¥æ¦‚ç‡pè¿æ¥
+	 * @param N Nä¸ªç‚¹
+	 * @param p æ¦‚ç‡p
 	 */
 	private static void randomLink(int N, double p) {
 	    double x = 10.0;
@@ -76,6 +76,6 @@ public class EX1131RandomLink {
 	    double[][] points = drawPoints(x, y, r, N);
 	    randomLinkPoints(points, p);
 	}
-	
+
 
 }

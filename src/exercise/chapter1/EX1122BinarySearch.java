@@ -1,6 +1,6 @@
 package exercise.chapter1;
 
-//BinarySearch Ã¿µ±rank±»µ÷ÓÃÊ±£¬´òÓ¡³öloºÍhi²¢°´µİ¹éÉî¶ÈËõ½ø¡£
+//BinarySearch æ¯å½“rankè¢«è°ƒç”¨æ—¶ï¼Œæ‰“å°å‡ºloå’Œhiå¹¶æŒ‰é€’å½’æ·±åº¦ç¼©è¿›ã€‚
 public class EX1122BinarySearch {
 
 	public static void main(String[] args) {
@@ -12,7 +12,7 @@ public class EX1122BinarySearch {
             System.out.println("key location="+(location+1));
 
 	}
-	
+
 	public static int deep=0;
 	public static int rank(int key,int[] a){
 		return rank(key,a,0,a.length-1);

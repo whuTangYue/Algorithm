@@ -2,12 +2,31 @@ package study.chapter2;
 
 import java.util.Random;
 
-//希尔排序
-//较高效率的排序算法中代码比较简单，在中等数量输入下表现良好
-//递增序列h=3*h+1
+//甯屽皵鎺掑簭
+//杈冮珮鏁堢巼鐨勬帓搴忕畻娉曚腑浠ｇ爜姣旇緝绠�鍗曪紝鍦ㄤ腑绛夋暟閲忚緭鍏ヤ笅琛ㄧ幇鑹ソ
+//閫掑搴忓垪h=3*h+1
 public class ShellSort extends Sort {
+	public static void sort(double[] a) {
+		int N = a.length;
+		int h = 1;
+		while (h < N / 3)
+			h = 3 * h + 1;
+		while (h >= 1) {
+			for (int i = h; i < N; i++) {
+				double tmp = a[i];
+				int j = i;
+				for (j = i; j >= h && less(tmp, a[j - h]); j -= h)
+					a[j] = a[j - h];
+				a[j] = tmp;
 
-	public static <T extends Comparable<T>> void sort(T[] a) {
+				// for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
+				// exch(a, j, j - h);
+			}
+			h = h / 3;
+		}
+	}
+
+	public static <T extends Comparable<? super T>> void sort(T[] a) {
 		int N = a.length;
 		int h = 1;
 		while (h < N / 3)
@@ -19,10 +38,9 @@ public class ShellSort extends Sort {
 				for (j = i; j >= h && less(tmp, a[j - h]); j -= h)
 					a[j] = a[j - h];
 				a[j] = tmp;
-				
-				
-//				for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
-//					exch(a, j, j - h);
+
+				// for (int j = i; j >= h && less(a[j], a[j - h]); j -= h)
+				// exch(a, j, j - h);
 			}
 			h = h / 3;
 		}

@@ -4,10 +4,10 @@ import java.util.Arrays;
 import exercise.depend.In;
 import exercise.depend.StdIn;
 
-// ÎªBinarySearch ²âÊÔÓÃÀıÌí¼ÓÒ»¸ö²ÎÊı£º+´òÓ¡³ö±ê×¼ÊäÈëÖĞ²»ÔÚ°×Ãûµ¥ÖĞµÄÖµ£¬-´òÓ¡³öÔÚ°×Ãûµ¥ÖĞµÄÖµ
+// ä¸ºBinarySearch æµ‹è¯•ç”¨ä¾‹æ·»åŠ ä¸€ä¸ªå‚æ•°ï¼š+æ‰“å°å‡ºæ ‡å‡†è¾“å…¥ä¸­ä¸åœ¨ç™½åå•ä¸­çš„å€¼ï¼Œ-æ‰“å°å‡ºåœ¨ç™½åå•ä¸­çš„å€¼
 //eclipse
 //in run/debug settings
-//set program argument to    largeW.txt +/- 
+//set program argument to    largeW.txt +/-
 //set input file to largeT.txt
 public class EX1123 {
 
@@ -34,7 +34,7 @@ public class EX1123 {
 		}
 
 	}
-	
+
 	public static int rank(int key,int[] a){
 		int lo = 0;
 		int hi = a.length - 1;

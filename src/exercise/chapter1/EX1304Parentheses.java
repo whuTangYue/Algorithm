@@ -2,16 +2,16 @@ package exercise.chapter1;
 
 import java.util.Stack;
 
-//Ê¹ÓÃÕ»ÅĞ¶¨ÎÄ±¾Á÷ÖĞÀ¨ºÅÊÇ·ñÅä¶ÔÍêÕû
+//ä½¿ç”¨æ ˆåˆ¤å®šæ–‡æœ¬æµä¸­æ‹¬å·æ˜¯å¦é…å¯¹å®Œæ•´
 public class EX1304Parentheses {
-	
+
 	public static boolean isBalance(String s){
 		Stack<Character> p = new Stack<Character>();
 		int n = s.length();
         for (int i = 0; i < n; i++)
         {
         	char c = s.charAt(i);
-			if(c=='('||c=='['||c=='{') 
+			if(c=='('||c=='['||c=='{')
 				p.push(c);
 			if((c==')'&&(p.isEmpty()||p.pop()!='('))||
 			   (c==']'&&(p.isEmpty()||p.pop()!='['))||
@@ -28,4 +28,3 @@ public class EX1304Parentheses {
 	}
 
 }
-

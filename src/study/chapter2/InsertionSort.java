@@ -1,33 +1,97 @@
- package study.chapter2;
+package study.chapter2;
 
 import java.util.Random;
 
-//²åÈëÅÅĞò
-//½»»»´ÎÊıÓëÊı×éÖĞµ¹ÖÃÊıÏàÍ¬£¬±È½Ï´ÎÊı´óÓÚµÈÓÚµ¹ÖÃÊıÁ¿£¬Ğ¡ÓÚµÈÓÚµ¹ÖÃÊı+Êı×é´óĞ¡-1
-//¶Ô²¿·ÖÓĞĞòÊı×éÊ®·Ö¸ßĞ§£¬Ò²ºÜÊÊºÏĞ¡¹æÄ£Êı×é
+//æ’å…¥æ’åº
+//äº¤æ¢æ¬¡æ•°ä¸æ•°ç»„ä¸­å€’ç½®æ•°ç›¸åŒï¼Œæ¯”è¾ƒæ¬¡æ•°å¤§äºç­‰äºå€’ç½®æ•°é‡ï¼Œå°äºç­‰äºå€’ç½®æ•°+æ•°ç»„å¤§å°-1
+//å¯¹éƒ¨åˆ†æœ‰åºæ•°ç»„ååˆ†é«˜æ•ˆï¼Œä¹Ÿå¾ˆé€‚åˆå°è§„æ¨¡æ•°ç»„
 public class InsertionSort extends Sort {
-	public static <T extends Comparable<T>> void sort(T[] a) {
+	public static void sort(double[] a) {
 		int N = a.length;
+		int min = 0;
 		for (int i = 0; i < N; i++) {
-			//½Ï´óÔªËØÓÒÒÆ¶ø²»ÊÇ½»»»£¬·ÃÎÊÊı×é´ÎÊı¼õ°ë£¬´ó·ùÌá¸ßËÙ¶È
+			if (a[i] < a[min]) {
+				min = i;
+			}
+		}
+		exch(a, min, 0);
+		for (int i = 0; i < N; i++) {
+			// è¾ƒå¤§å…ƒç´ å³ç§»è€Œä¸æ˜¯äº¤æ¢ï¼Œè®¿é—®æ•°ç»„æ¬¡æ•°å‡åŠï¼Œå¤§å¹…æé«˜é€Ÿåº¦
+			double tmp = a[i];
+			int j = i;
+			for (j = i; less(tmp, a[j - 1]); j--)
+				a[j] = a[j - 1];
+			a[j] = tmp;
+
+			// for (int j = i; j > 0 && less(a[j], a[j - 1]); j--)
+			// exch(a,j,j-1);
+		}
+	}
+
+	public static <T extends Comparable<? super T>> void sort(T[] a) {
+		int N = a.length;
+		int min = 0;
+		for (int i = 0; i < N; i++) {
+			if (a[min].compareTo(a[i]) > 0) {
+				min = i;
+			}
+		}
+		exch(a, min, 0);
+		for (int i = 0; i < N; i++) {
+			// è¾ƒå¤§å…ƒç´ å³ç§»è€Œä¸æ˜¯äº¤æ¢ï¼Œè®¿é—®æ•°ç»„æ¬¡æ•°å‡åŠï¼Œå¤§å¹…æé«˜é€Ÿåº¦
 			T tmp = a[i];
 			int j = i;
 			for (j = i; j > 0 && less(tmp, a[j - 1]); j--)
 				a[j] = a[j - 1];
 			a[j] = tmp;
-			
-//			for (int j = i; j > 0 && less(a[j], a[j - 1]); j--)
-//				exch(a,j,j-1);
+
+			// for (int j = i; j > 0 && less(a[j], a[j - 1]); j--)
+			// exch(a,j,j-1);
 		}
 
 	}
 
+	public static void insertionSort(double[] a, int lo, int hi) {
+		int min = lo;
+		for (int i = 0; i <= hi; i++) {
+			if (a[i] < a[min]) {
+				min = i;
+			}
+		}
+		exch(a, min, lo);
+		for (int i = lo; i <= hi; i++) {
+			double tmp = a[i];
+			int j = i;
+			for (j = i; tmp < a[j - 1]; j--)
+				a[j] = a[j - 1];
+			a[j] = tmp;
+		}
+	}
+
+	public static <T extends Comparable<? super T>> void insertionSort(T[] a,
+			int lo, int hi) {
+		int min = lo;
+		for (int i = lo; i <= hi; i++) {
+			if (a[min].compareTo(a[i]) > 0) {
+				min = i;
+			}
+		}
+		exch(a, min, lo);
+		for (int i = lo; i <= hi; i++) {
+			T tmp = a[i];
+			int j = i;
+			for (j = i;  a[j - 1].compareTo(tmp) > 0; j--)
+				a[j] = a[j - 1];
+			a[j] = tmp;
+		}
+	}
+
 	public static void main(String[] args) {
-		Integer[] a = new Integer[10];
+		Integer[] a = new Integer[100];
 		Random random = new Random();
 		for (int t = 0; t < 10; t++) {
-			for (int i = 0; i < 10; i++) {
-				a[i] = random.nextInt(30);
+			for (int i = 0; i < a.length; i++) {
+				a[i] = random.nextInt(200);
 			}
 			sort(a);
 		}

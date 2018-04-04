@@ -2,8 +2,8 @@ package exercise.chapter1;
 
 import java.util.Arrays;
 
-//É¾³ıÖØ¸´ÔªËØ
-//ĞŞ¸ÄBinarySearch µÄ²âÊÔÓÃÀı£¬É¾È¥ÅÅĞòÖ®ºó°×Ãûµ¥ÖĞËùÓĞÖØ¸´ÔªËØ
+//åˆ é™¤é‡å¤å…ƒç´ 
+//ä¿®æ”¹BinarySearch çš„æµ‹è¯•ç”¨ä¾‹ï¼Œåˆ å»æ’åºä¹‹åç™½åå•ä¸­æ‰€æœ‰é‡å¤å…ƒç´ 
 public class EX1128Dereplication {
 
 	public static void main(String[] args) {

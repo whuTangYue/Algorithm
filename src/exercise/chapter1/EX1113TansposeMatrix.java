@@ -18,12 +18,12 @@ public class EX1113TansposeMatrix {
 		for(int i=0;i<a.length;i++){
 			for(int j=0;j<a[0].length;j++){
 				System.out.print(a[i][j]+" ");
-				
+
 			}
 			System.out.print("\n");
 		}
 	}
-	//×ªÖÃ¾ØÕó
+	//è½¬ç½®çŸ©é˜µ
 	private static int[][] transpose(int[][] a){
 		int[][] b= new int[a[0].length][a.length];
 		for(int i=0;i<a.length;i++){

@@ -1,36 +1,36 @@
 package exercise.chapter1;
 
 //Matrix
-//¾ØÕóÀà
+//çŸ©é˜µç±»
 public class EX1133Matrix {
 
 	public static void main(String[] args) {
-		System.out.println("-------- ÏòÁ¿µã³Ë ---------");
+		System.out.println("-------- å‘é‡ç‚¹ä¹˜ ---------");
 		double[] a0 = { 1, 2, 3 };
 		double[] b0 = { 4, 5, 6 };
 		double res0 = dot(a0, b0);
 		System.out.println(res0);
 
-		System.out.println("-------- ¾ØÕó³Ë·¨ ---------");
+		System.out.println("-------- çŸ©é˜µä¹˜æ³• ---------");
 		double[][] a1 = { { 1, 2 }, { 3, 4 }, { 5, 6 } };
 		double[][] b1 = { { 1, 2, 3 }, { 4, 5, 6 } };
 		double[][] res1 = mult(a1, b1);
 		dispMatrix(res1);
 
-		System.out.println("-------- ¾ØÕó×ªÖÃ ---------");
+		System.out.println("-------- çŸ©é˜µè½¬ç½® ---------");
 		double[][] a2 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		double[][] c2 = transpose(a2);
 		dispMatrix(a2);
 		System.out.println("transpose:");
 		dispMatrix(c2);
 
-		System.out.println("----- ¾ØÕóºÍÏòÁ¿Ö®»ı ------");
+		System.out.println("----- çŸ©é˜µå’Œå‘é‡ä¹‹ç§¯ ------");
 		double[][] a3 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		double[] b3 = { 1, 2, 3 };
 		double[][] c3 = mult(a3, b3);
 		dispMatrix(c3);
 
-		System.out.println("----- ÏòÁ¿ºÍ¾ØÕóÖ®»ı ------");
+		System.out.println("----- å‘é‡å’ŒçŸ©é˜µä¹‹ç§¯ ------");
 		double[] a4 = { 1, 2, 3 };
 		double[][] b4 = { { 1, 2, 3 }, { 4, 5, 6 }, { 7, 8, 9 } };
 		double[] c4 = mult(a4, b4);
@@ -38,7 +38,7 @@ public class EX1133Matrix {
 
 	}
 
-	// Ò»Î¬Êı×éµã³Ë
+	// ä¸€ç»´æ•°ç»„ç‚¹ä¹˜
 	public static double dot(double[] x, double[] y) {
 		double result = 0;
 		if (x.length == y.length) {
@@ -49,7 +49,7 @@ public class EX1133Matrix {
 			throw new IllegalArgumentException();
 	}
 
-	// ¾ØÕóÓë¾ØÕóÖ®»ı
+	// çŸ©é˜µä¸çŸ©é˜µä¹‹ç§¯
 	public static double[][] mult(double[][] a, double[][] b) {
 		if (a[0].length == b.length) {
 			double[][] result = new double[a.length][b[0].length];
@@ -68,7 +68,7 @@ public class EX1133Matrix {
 			throw new IllegalArgumentException();
 	}
 
-	// ×ªÖÃ¾ØÕó
+	// è½¬ç½®çŸ©é˜µ
 	public static double[][] transpose(double[][] a) {
 		double[][] b = new double[a.length][a[0].length];
 		for (int i = 0; i < a.length; i++) {
@@ -79,7 +79,7 @@ public class EX1133Matrix {
 		return b;
 	}
 
-	// ¾ØÕóÓëÏòÁ¿Ö®»ı
+	// çŸ©é˜µä¸å‘é‡ä¹‹ç§¯
 	public static double[][] mult(double[][] a, double[] x) {
 		if (a[0].length == x.length) {
 			double[][] result = new double[a.length][x.length];
@@ -98,7 +98,7 @@ public class EX1133Matrix {
 			throw new IllegalArgumentException();
 	}
 
-	// ÏòÁ¿Óë¾ØÕóÖ®»ı
+	// å‘é‡ä¸çŸ©é˜µä¹‹ç§¯
 	public static double[] mult(double[] y, double[][] a) {
 		if (y.length == a.length) {
 			double[] result = new double[a[0].length];

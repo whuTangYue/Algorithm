@@ -11,7 +11,7 @@ public class EX1138BruteForceSearch {
 		int[] whiteList = new In(args[0]).readAllInts();
 		int[] list = new In(args[1]).readAllInts();
 		long time0 = new Date().getTime();
-		
+
 		for (int i = 0; i < list.length; i++) {
 			int key = list[i];
 			int find = BruteForceSearch(key, whiteList);
@@ -20,7 +20,7 @@ public class EX1138BruteForceSearch {
 		}
 		long time1 = new Date().getTime();
 		long elapsedTime = time1 - time0;
-		System.out.println("±©Á¦²éÕÒÓÃÊ±£º " + elapsedTime + " ms");
+		System.out.println("æš´åŠ›æŸ¥æ‰¾ç”¨æ—¶ï¼š " + elapsedTime + " ms");
 		Arrays.sort(whiteList);
 		long time2 = new Date().getTime();
 		for (int i = 0; i < list.length; i++) {
@@ -31,7 +31,7 @@ public class EX1138BruteForceSearch {
 		}
 		long time3 = new Date().getTime();
 		elapsedTime = time3 - time2;
-		System.out.println("¶þ·Ö²éÕÒÓÃÊ±£º " + elapsedTime + " ms");
+		System.out.println("äºŒåˆ†æŸ¥æ‰¾ç”¨æ—¶ï¼š " + elapsedTime + " ms");
 
 	}
 

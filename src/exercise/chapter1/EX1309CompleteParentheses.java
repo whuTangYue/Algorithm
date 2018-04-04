@@ -3,9 +3,9 @@ package exercise.chapter1;
 import java.util.Stack;
 
 public class EX1309CompleteParentheses {
-	
+
 	//
-	//ÊäÈë¸÷ÔªËØÖ®¼äĞèÓÃ¿Õ¸ñ·Ö¸ô£¬²»Ê¡ÂÔÀ¨ºÅ£¬¼´²»¿¼ÂÇÓÅÏÈ¼¶
+	//è¾“å…¥å„å…ƒç´ ä¹‹é—´éœ€ç”¨ç©ºæ ¼åˆ†éš”ï¼Œä¸çœç•¥æ‹¬å·ï¼Œå³ä¸è€ƒè™‘ä¼˜å…ˆçº§
 	public static String completeParentheses(String args) {
 		Stack<String> optr = new Stack<String>();
 		Stack<String> expr = new Stack<String>();
@@ -26,7 +26,7 @@ public class EX1309CompleteParentheses {
             	{
                 if(!optr.isEmpty()) op = optr.pop(); else op = "";
                 if(!expr.isEmpty()) ex = expr.pop(); else ex = "";
-                
+
                 if (op.equals("+") ||
                     op.equals("-") ||
                     op.equals("*") ||
@@ -41,7 +41,7 @@ public class EX1309CompleteParentheses {
 		return expr.pop();
 
 	}
-	
+
 	 public static void main(String[] args) {
 	        String str = "( 2 + ( ( 3 + 4 ) * ( 5 * 6 ) ) )";
 	        String res = completeParentheses(str);

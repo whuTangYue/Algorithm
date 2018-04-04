@@ -2,13 +2,13 @@ package exercise.chapter1;
 
 import java.util.Arrays;
 
-//等值键
-//rank():接受一个键和一个整型有序数组作为参数并返回数组中小于该键的元素数量
-//count():返回数组中等于该键的元素数量
+//绛夊�奸敭
+//rank():鎺ュ彈涓�涓敭鍜屼竴涓暣鍨嬫湁搴忔暟缁勪綔涓哄弬鏁板苟杩斿洖鏁扮粍涓皬浜庤閿殑鍏冪礌鏁伴噺
+//count():杩斿洖鏁扮粍涓瓑浜庤閿殑鍏冪礌鏁伴噺
 
 //eclipse
 //in run/debug settings
-//set program argument to    largeW.txt +/- 
+//set program argument to    largeW.txt +/-
 //set input file to largeT.txt
 public class EX1129KeyCount {
 	public static void main(String[] args) {
@@ -19,7 +19,7 @@ public class EX1129KeyCount {
 		int rank = rank(key, whitelist);
 		if (rank >= -1)
 			System.out.println("key:" + key + " rank:" + rank + " count:" + count(key, whitelist));
-		
+
 //		System.out.println("Input a key");
 //		while (!StdIn.isEmpty()) {
 //

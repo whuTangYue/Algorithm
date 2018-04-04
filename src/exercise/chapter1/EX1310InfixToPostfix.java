@@ -21,7 +21,7 @@ public class EX1310InfixToPostfix {
 		}
 		return res;
 	}
-	
+
 	public static void main(String[] args) {
 		String s="2 + ( ( 3 + 4 ) * ( 5 * 6 ) )";
 		System.out.println(InfixToPostfix(s));

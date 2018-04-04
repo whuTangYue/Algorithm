@@ -68,7 +68,7 @@ public class linkedList<Item> implements Iterable<Item>{
 	
 
 	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+		
 
 	}
 

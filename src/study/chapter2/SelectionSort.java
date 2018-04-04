@@ -2,13 +2,22 @@ package study.chapter2;
 
 import java.util.Random;
 
-//Ñ¡ÔñÅÅĞò
-//´óÔ¼N^2/2´Î±È½ÏºÍN´Î½»»»
-//ÔËĞĞÊ±¼äÓëÊäÈëÎŞ¹Ø
-//Êı¾İÒÆ¶¯´ÎÊı×îÉÙ
-public class SelectionSort extends Sort {
-
-	public static <T extends Comparable<T>> void sort(T[] a) {
+//é€‰æ‹©æ’åº
+//å¤§çº¦N^2/2æ¬¡æ¯”è¾ƒå’ŒNæ¬¡äº¤æ¢
+//è¿è¡Œæ—¶é—´ä¸è¾“å…¥æ— å…³
+//æ•°æ®ç§»åŠ¨æ¬¡æ•°æœ€å°‘
+public class SelectionSort extends Sort{
+	public static void sort(double[] a) {
+		int N = a.length;
+		for (int i = 0; i < N; i++) {
+			int min = i;
+			for (int j = i + 1; j < N; j++)
+				if (less(a[j], a[min]))
+					min = j;
+			exch(a, i, min);
+		}
+	}
+	public static <T extends Comparable<? super T>> void sort(T[] a) {
 		int N = a.length;
 		for (int i = 0; i < N; i++) {
 			int min = i;
@@ -19,7 +28,7 @@ public class SelectionSort extends Sort {
 		}
 
 	}
-	
+
 	public static void main(String[] args) {
 		Integer[] a = new Integer[10];
 		Random random = new Random();

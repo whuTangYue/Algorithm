@@ -1,7 +1,7 @@
 package study.chapter1;
 import java.math.BigInteger;
 public class Matrix {
-	//Ò»Î¬Êı×éµã³Ë
+	//ä¸€ç»´æ•°ç»„ç‚¹ä¹˜
 	public static double dot(double[] x,double[] y){
 		double result = 0;
 		if(x.length==y.length){
@@ -11,7 +11,7 @@ public class Matrix {
 			}
 		else  throw new IllegalArgumentException();
 	}
-	//¾ØÕóÓë¾ØÕóÖ®»ı
+	//çŸ©é˜µä¸çŸ©é˜µä¹‹ç§¯
 	public static double[][] mult(double[][] a,double[][] b){
 		if(a[0].length == b.length)
 		{
@@ -24,7 +24,7 @@ public class Matrix {
 					for(int x = 0;x<b.length;x++)
 					{
 						temp+=a[i][x]*b[x][j];
-						
+
 					}
 					result[i][j] = temp;
 				}
@@ -45,7 +45,7 @@ public class Matrix {
 					for(int x = 0;x<b.length;x++)
 					{
 						temp+=a[i][x]*b[x][j];
-						
+
 					}
 					result[i][j] = temp;
 				}
@@ -66,7 +66,7 @@ public class Matrix {
 					for(int x = 0;x<b.length;x++)
 					{
 						temp=temp.add(a[i][x].multiply(b[x][j]));
-						
+
 					}
 					result[i][j] = temp;
 				}
@@ -75,7 +75,7 @@ public class Matrix {
 		}
 		else throw new IllegalArgumentException();
 	}
-	//×ªÖÃ¾ØÕó
+	//è½¬ç½®çŸ©é˜µ
 	public static double[][] transpose(double[][] a){
 		double[][] b= new double[a.length][a[0].length];
 		for(int i=0;i<a.length;i++){
@@ -85,7 +85,7 @@ public class Matrix {
 		}
 		return b;
 	}
-	//¾ØÕóÓëÏòÁ¿Ö®»ı
+	//çŸ©é˜µä¸å‘é‡ä¹‹ç§¯
 	public static double[][] mult(double[][] a,double[] x){
 		if(a[0].length == x.length)
 		{
@@ -98,7 +98,7 @@ public class Matrix {
 					for(int xi=0;xi<x.length;xi++)
 					{
 						temp+=a[i][xi]*x[j];
-						
+
 					}
 					result[i][j] = temp;
 				}
@@ -107,7 +107,7 @@ public class Matrix {
 		}
 		else throw new IllegalArgumentException();
 	}
-	//ÏòÁ¿Óë¾ØÕóÖ®»ı
+	//å‘é‡ä¸çŸ©é˜µä¹‹ç§¯
 	public static double[] mult(double[] y,double[][] a){
 		if(y.length == a.length)
 		{
@@ -120,7 +120,7 @@ public class Matrix {
 					for(int yi = 0;yi<a.length;yi++)
 					{
 						temp+=y[i]*a[yi][j];
-						
+
 					}
 					result[i] = temp;
 				}
