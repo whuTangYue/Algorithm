@@ -14,7 +14,7 @@ public class EX1337Josephus {
 	}
 
 	public static void main(String[] args) {
-		Josephus(7, 2);
+		Josephus(100, 2);
 
 	}
 

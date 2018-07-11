@@ -50,9 +50,9 @@
 //http://stackoverflow.com/questions/5538192/how-to-implement-a-queue-with-three-stacks
 //>######SUMMARY
 //>>O(1) algorithm is known for 6 stacks
-//>>O(1) algorithm is known for 3 stacks,
-//but using lazy evaluation which in practice corresponds to having extra internal data structures,
-//so it does not constitute a solution
+//>>O(1) algorithm is known for 3 stacks,but 
+//  using lazy evaluation which in practice corresponds to having extra internal data structures,
+//  so it does not constitute a solution
 //>>People near Sedgewick have confirmed they are not aware of a 3-stack solution within all the constraints
 //of the original question
 

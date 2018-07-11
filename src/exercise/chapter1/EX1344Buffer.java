@@ -1,5 +1,7 @@
 package exercise.chapter1;
 
+import study.chapter1.Stack;
+
 public class EX1344Buffer {
 
 	public static void main(String[] args) {

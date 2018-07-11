@@ -1,5 +1,6 @@
 package exercise.chapter1;
 
+import study.chapter1.Stack;
 
 //the implementation of Stack is in file Stack.java
 public class EX1307Peek {

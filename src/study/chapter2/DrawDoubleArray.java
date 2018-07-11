@@ -2,7 +2,7 @@ package study.chapter2;
 
 import java.util.Random;
 
-import exercise.depend.StdDraw;
+import depend.StdDraw;
 
 public class DrawDoubleArray {
 	public static void Draw(Double[] a) {

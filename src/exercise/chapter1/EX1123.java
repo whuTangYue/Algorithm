@@ -1,8 +1,8 @@
 package exercise.chapter1;
 import java.util.Arrays;
 
-import exercise.depend.In;
-import exercise.depend.StdIn;
+import depend.In;
+import depend.StdIn;
 
 // 为BinarySearch 测试用例添加一个参数：+打印出标准输入中不在白名单中的值，-打印出在白名单中的值
 //eclipse

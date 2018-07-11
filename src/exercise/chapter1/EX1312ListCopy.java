@@ -1,5 +1,7 @@
 package exercise.chapter1;
 
+import study.chapter1.Stack;
+
 public class EX1312ListCopy {
 	public static Stack<String> copy(Stack<String> that) {
 		Stack<String> stack = new Stack<String>();

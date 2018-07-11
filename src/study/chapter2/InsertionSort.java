@@ -19,7 +19,7 @@ public class InsertionSort extends Sort {
 			// 较大元素右移而不是交换，访问数组次数减半，大幅提高速度
 			double tmp = a[i];
 			int j = i;
-			for (j = i; less(tmp, a[j - 1]); j--)
+			for (j = i; j > 0 && less(tmp, a[j - 1]); j--)
 				a[j] = a[j - 1];
 			a[j] = tmp;
 

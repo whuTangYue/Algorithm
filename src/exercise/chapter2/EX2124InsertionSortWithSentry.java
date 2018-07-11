@@ -2,7 +2,7 @@ package exercise.chapter2;
 
 import java.util.Random;
 
-import exercise.depend.StdDraw;
+import depend.StdDraw;
 
 public class EX2124InsertionSortWithSentry {
 public static <T extends Comparable<T> > void sort(T[] a) {
@@ -47,7 +47,7 @@ protected static void show(Double[] a) {
 	StdDraw.setCanvasSize(1024, 512);
 	StdDraw.setXscale(0, n);
 
-	StdDraw.show(0);
+	StdDraw.show();
 	for (int i = 0; i < n; i++) {
 		StdDraw.filledRectangle(0.4 + i, a[i] / 2, 0.4, a[i] / 2);
 	}

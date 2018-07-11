@@ -76,6 +76,45 @@ public class Sort {
 		return true;
 	}
 
+	public static boolean check() {
+		String[] a = new String[8];
+		for (int i = 0; i < 8; i++) {
+			a[i] = i + " ";
+		}
+		shuffle(a);
+		String[] b = a.clone();
+		sort(a);
+		assert isSorted(a);
+		for (int i = 0; i < a.length; i++) {
+			boolean found = false;
+			for (int j = 0; j < a.length; j++) {
+				if (a[i] == b[j]) {
+					found = true;
+					break;
+				}
+			}
+			if (!found) {
+				return false;
+			}
+		}
+		return true;
+	}
+
+	//选择排序交换部分使用新建对象的方法，用于测试check()
+//	public static void SelectionSort(String[] s) {
+//		for (int i = 0; i < s.length; i++) {
+//			int min = i;
+//			for (int j = i + 1; j < s.length; j++) {
+//				if (s[j].compareTo(s[min]) < 0) {
+//					min = j;
+//				}
+//			}
+//			String temp = new String(s[i].toCharArray());
+//			s[i] = s[min];
+//			s[min] = temp;
+//		}
+//	}
+
 	public static <T extends Comparable<? super T>> void shuffle(T[] a) {
 
 		int N = a.length;
@@ -86,15 +125,15 @@ public class Sort {
 		}
 
 	}
-	
+
 	public static void test() {
 		test(8);
 	}
-	
+
 	public static void test(int N) {
 		Integer[] array = new Integer[N];
-		for(int i = 0;i<N;i++) {
-			array[i]=i;
+		for (int i = 0; i < N; i++) {
+			array[i] = i;
 		}
 		shuffle(array);
 		show(array);
@@ -105,6 +144,7 @@ public class Sort {
 
 	public static void main(String[] args) {
 		test();
+		System.out.println(check());
 
 	}
 }

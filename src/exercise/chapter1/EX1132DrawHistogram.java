@@ -1,8 +1,7 @@
 package exercise.chapter1;
 
-//import exercise.depend.In;
-import exercise.depend.StdDraw;
-import exercise.depend.StdIn;
+import depend.StdDraw;
+import depend.StdIn;
 
 //直方图
 //设输入流中有一系列double值，从命令行接受一个整数N和两个double值l和r，将(l,r)分为N段并

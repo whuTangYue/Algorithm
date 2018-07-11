@@ -7,7 +7,7 @@
  *
  ******************************************************************************/
 
-package exercise.depend;
+package depend;
 
 import java.util.ArrayList;
 import java.util.InputMismatchException;

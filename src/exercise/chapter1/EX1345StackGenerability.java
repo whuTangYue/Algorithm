@@ -3,6 +3,8 @@ package exercise.chapter1;
 import java.util.ArrayList;
 import java.util.Arrays;
 
+import study.chapter1.Stack;
+
 public class EX1345StackGenerability {
 	public static boolean CheckInputSeq(String[] inputSeq) {
 		int sum = 0;
@@ -58,7 +60,7 @@ public class EX1345StackGenerability {
 		String input = "1 2 3 4 5 - 6 - - 7 - - - 8 9 - - -";
 		String[] inputseq = input.split(" ");
 		System.out.println(input);
-		System.out.println(CheckInputSeq(inputseq) + " " + (CheckInputSeq(inputseq) ? "²»»áÒç³ö" : "»áÒç³ö"));
+		System.out.println(CheckInputSeq(inputseq) + " " + (CheckInputSeq(inputseq) ? "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" : "ï¿½ï¿½ï¿½ï¿½ï¿½"));
 
 		ArrayList<Integer> pushArray = new ArrayList<Integer>();
 		ArrayList<Integer> popArray = new ArrayList<Integer>();
@@ -82,7 +84,7 @@ public class EX1345StackGenerability {
 		System.out.println(popArray);
 
 		System.out.println(CheckStackGenerability(pushArray, popArray) + " "
-				+ (CheckStackGenerability(pushArray, popArray) ? "¿ÉÉú³É" : "²»¿ÉÉú³É"));
+				+ (CheckStackGenerability(pushArray, popArray) ? "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" : "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
 
 		System.out.println(GetGenerateInput(pushArray, popArray));
 		
@@ -91,7 +93,7 @@ public class EX1345StackGenerability {
 		System.out.println(testArray);
 		
 		System.out.println(CheckStackGenerability(pushArray, testArray) + " "
-				+ (CheckStackGenerability(pushArray, testArray) ? "¿ÉÉú³É" : "²»¿ÉÉú³É"));
+				+ (CheckStackGenerability(pushArray, testArray) ? "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½" : "ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½"));
 
 		System.out.println(GetGenerateInput(pushArray, testArray));
 		

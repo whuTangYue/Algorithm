@@ -2,7 +2,7 @@ package exercise.chapter1;
 
 import java.util.Random;
 
-import exercise.depend.StdDraw;
+import depend.StdDraw;
 
 //随机连接
 //接受一个整数N和一个double p(0<p<1)作为参数，在一个圆上画出大小0.05间距相等的N个点，然后an概率p用灰线连接

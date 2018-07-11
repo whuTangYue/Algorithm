@@ -2,7 +2,7 @@ package exercise.chapter2;
 
 import java.util.Random;
 
-import exercise.depend.StdDraw;
+import depend.StdDraw;
 
 public class EX2117ShowSorting {
 	public static void drawDoubleArray(Double[] a) {
@@ -27,7 +27,8 @@ public class EX2117ShowSorting {
 
 	public static void show(Double[] a) {
 		int n = a.length;
-		StdDraw.show(1000);
+		StdDraw.show();
+		StdDraw.pause(20);
 		StdDraw.clear();
 		for (int i = 0; i < n; i++) {
 			StdDraw.filledRectangle(0.4 + i, a[i] / 2, 0.4, a[i] / 2);

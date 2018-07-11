@@ -3,7 +3,7 @@ package exercise.chapter1;
 import java.util.Arrays;
 import java.util.Date;
 
-import exercise.depend.In;
+import depend.In;
 
 public class EX1138BruteForceSearch {
 
